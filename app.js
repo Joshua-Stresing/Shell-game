@@ -13,11 +13,14 @@ const totalSpan = document.getElementById('total');
 let wins = 0;
 let total = 0;
 
-
-button1.addEventListener('click', () => {
+function removeBall(){
     ball1.classList.remove('reveal');
     ball2.classList.remove('reveal');
     ball3.classList.remove('reveal');
+}
+
+button1.addEventListener('click', () => {
+    removeBall();
     total++;
     const ballLocation = Math.ceil(Math.random() * 3);
     console.log('ball is in location', ballLocation);
@@ -37,19 +40,17 @@ button1.addEventListener('click', () => {
 });
 
 button2.addEventListener('click', () => {
-    ball1.classList.remove('reveal');
-    ball2.classList.remove('reveal');
-    ball3.classList.remove('reveal');
+    removeBall();
     total++;
     const ballLocation = Math.ceil(Math.random() * 3);
     console.log('ball is in location', ballLocation);
 
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
-      } else if (ballLocation === 2) {
+    } else if (ballLocation === 2) {
         ball2.classList.add('reveal');
         wins++;
-      } else {
+    } else {
         ball3.classList.add('reveal');
     }
 
@@ -59,21 +60,19 @@ button2.addEventListener('click', () => {
 });
 
 button3.addEventListener('click', () => {
-    ball1.classList.remove('reveal');
-    ball2.classList.remove('reveal');
-    ball3.classList.remove('reveal');
+    removeBall();
     total++;
     const ballLocation = Math.ceil(Math.random() * 3);
     console.log('ball is in location', ballLocation);
 
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
-      } else if (ballLocation === 2) {
+    } else if (ballLocation === 2) {
         ball2.classList.add('reveal');
-      } else {
+    } else {
         ball3.classList.add('reveal');
         wins++;
-      }
+    }
 
     winSpan.textContent = wins;
     totalSpan.textContent = total;
