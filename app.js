@@ -31,7 +31,7 @@ function displayResults(){
 button1.addEventListener('click', () => {
     removeBall();
     const ballLocation = Math.ceil(Math.random() * 3);
-    console.log('ball is in location', ballLocation);
+    
 
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
@@ -48,7 +48,7 @@ button1.addEventListener('click', () => {
 button2.addEventListener('click', () => {
     removeBall();
     const ballLocation = Math.ceil(Math.random() * 3);
-    console.log('ball is in location', ballLocation);
+    
 
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
@@ -65,7 +65,7 @@ button2.addEventListener('click', () => {
 button3.addEventListener('click', () => {
     removeBall();
     const ballLocation = Math.ceil(Math.random() * 3);
-    console.log('ball is in location', ballLocation);
+    
 
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
