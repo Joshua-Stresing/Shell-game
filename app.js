@@ -19,9 +19,17 @@ function removeBall(){
     ball3.classList.remove('reveal');
 }
 
+
+function displayResults(){
+    total++;
+    winSpan.textContent = wins;
+    totalSpan.textContent = total;
+    lossSpan.textContent = total - wins;
+}
+
+
 button1.addEventListener('click', () => {
     removeBall();
-    total++;
     const ballLocation = Math.ceil(Math.random() * 3);
     console.log('ball is in location', ballLocation);
 
@@ -34,14 +42,11 @@ button1.addEventListener('click', () => {
         ball3.classList.add('reveal');
     }
 
-    winSpan.textContent = wins;
-    totalSpan.textContent = total;
-    lossSpan.textContent = total - wins;
+    displayResults();
 });
 
 button2.addEventListener('click', () => {
     removeBall();
-    total++;
     const ballLocation = Math.ceil(Math.random() * 3);
     console.log('ball is in location', ballLocation);
 
@@ -54,14 +59,11 @@ button2.addEventListener('click', () => {
         ball3.classList.add('reveal');
     }
 
-    winSpan.textContent = wins;
-    totalSpan.textContent = total;
-    lossSpan.textContent = total - wins;
+    displayResults();
 });
 
 button3.addEventListener('click', () => {
     removeBall();
-    total++;
     const ballLocation = Math.ceil(Math.random() * 3);
     console.log('ball is in location', ballLocation);
 
@@ -74,7 +76,6 @@ button3.addEventListener('click', () => {
         wins++;
     }
 
-    winSpan.textContent = wins;
-    totalSpan.textContent = total;
-    lossSpan.textContent = total - wins;
+    displayResults();
 });
+
